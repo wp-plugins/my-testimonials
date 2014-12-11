@@ -1,0 +1,120 @@
+<script>
+
+    jQuery( document ).ready( function( $ ) {
+
+        var totalSliders = $( '.my-testimonial:not(#my-testimonial-hidden)' ).length;
+
+        var currentSlider = 1;
+        var nextSlider = 2;
+
+        var toFadeIn = null;
+        var toFadeOut = null;
+        
+        function slideShow() {
+
+            if( currentSlider === totalSliders ) { 
+
+                nextSlider = 1;
+
+                toFadeOut = $( '#my-testimonial-' + currentSlider );
+                toFadeIn = $( '#my-testimonial-' + nextSlider );
+                
+                currentSlider = 1;
+                nextSlider = 2;
+
+            } else {
+
+                toFadeOut = $( '#my-testimonial-' + currentSlider );
+                toFadeIn = $( '#my-testimonial-' + nextSlider );   
+
+                currentSlider++;
+                nextSlider++;
+
+            }
+            
+            $( '.my-testimonials-container' ).css( 'height', toFadeIn.height() );
+            
+            toFadeOut.fadeOut();
+            toFadeIn.fadeIn();
+
+        }
+
+        setInterval( slideShow, 4000 );
+
+    });
+    
+</script>
+    
+<style>
+    
+    .my-testimonials-container
+    {
+        width: 100%;
+        position: relative;
+        margin: 15px 0px;
+        transition: 0.7s all;
+    }
+    
+    .my-testimonials-container .my-testimonial
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+    
+    .my-testimonials-container .my-testimonial h4
+    {
+        font-weight: bold;
+        margin: 10px 0px;
+    }
+    
+    .my-testimonial#my-testimonial-hidden,
+    .my-testimonial#my-testimonial-1
+    {
+        display: block;
+    }
+    
+    .my-testimonial#my-testimonial-hidden
+    {
+        visibility: hidden;
+        position: relative;
+    }
+        
+</style>
+        
+<div class="my-testimonials-container">
+    
+    <?php
+    
+     $posts_args = array( 'posts_per_page' => -1, 'post_type' => 'testimonials' ); 
+     
+     if( $data['include'] ) $posts_args['include'] = $data['include'];
+     if( $data['type'] )  $posts_args['type'] = $data['type'];
+     
+     $posts = get_posts( $posts_args );
+    
+     $i = 1;
+
+    foreach( $posts as $post ) : ?>
+
+        <div class="my-testimonial" id="my-testimonial-<?php echo $i; ?>">
+
+             <h4><?php echo $post->post_title; ?></h4>
+             <?php echo $post->post_content; ?>
+            
+        </div>
+    
+        <?php $i++; ?>
+    
+    <?php endforeach; ?>
+
+    <div class="my-testimonial" id="my-testimonial-hidden">
+
+         <h4><?php echo $posts{0}->post_title; ?></h4>
+         
+         <?php echo $posts{0}->post_content; ?>
+
+    </div>
+    
+</div>
