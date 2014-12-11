@@ -12,7 +12,11 @@ This is a very simple testimonials plugin created By Peter Featherstone
 
 == Description ==
 
-This is a very simple testimonials plugin
+This is a very simple testimonials plugin.
+
+Please note that I have created this as a plugin as a personal project to use across various sites that I make, therefore there will be no custom support or feature requests in regards this plugin.
+
+You are of course more than welcome to use it however if you wish and it fulfils your needs!
 
 == Installation ==
 
