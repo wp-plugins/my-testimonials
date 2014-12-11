@@ -18,10 +18,6 @@ Please note that I have created this plugin as a personal project to use across 
 
 You are of course more than welcome to use it however if you wish and it fulfils your needs!
 
-== Description ==
-
-This is a very simple testimonials plugin
-
 == Installation ==
 
 1. Upload `my-testimonials` to the `/wp-content/plugins/` directory
