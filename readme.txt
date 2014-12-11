@@ -8,7 +8,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a very simple testimonials plugin created By Peter Featherstone
+This is a very simple testimonials plugin.
+
+Please note that I have created this as a plugin as a personal project to use across various sites that I make, therefore there will be no custom support or feature requests in regards this plugin.
+
+You are of course more than welcome to use it however if you wish and it fulfils your needs!
 
 == Description ==
 
