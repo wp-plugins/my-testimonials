@@ -22,9 +22,9 @@ It currently supports the following shortcode with options:
 
 [testimonials] - Shows all testimonials with all types
 
-[testimonials type="<type>"] - Enables you to specify which type of testimonial to show - e.g home-page
+[testimonials type=""] - Enables you to specify which type of testimonial to show - e.g home-page
 
-[testimonials includes="<ids>"] - Comma seperated list of testimonial IDs to include - e.g 1,3,5,4
+[testimonials includes=""] - Comma seperated list of testimonial IDs to include - e.g 1,3,5,4
 
 == Installation ==
 
