@@ -16,7 +16,13 @@ This is a very simple testimonials plugin.
 
 Please note that I have created this plugin as a personal project to use across various sites that I make, therefore there will be no custom support or feature requests in regards this plugin.
 
-You are of course more than welcome to use it however if you wish and it fulfils your needs!
+You are of course more than welcome to use it however if you wish and it fulfils your needs.
+
+It currently supports the following shortcode with options:
+
+[testimonials] - Shows all testimonials with all types
+[testimonials type="<type>"] - Enables you to specify which type of testimonial to show - e.g home-page
+[testimonials includes="<ids>"] - Comma seperated list of testimonial IDs to include - e.g 1,3,5,4
 
 == Installation ==
 
