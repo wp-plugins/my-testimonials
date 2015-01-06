@@ -90,8 +90,8 @@
     
      $posts_args = array( 'posts_per_page' => -1, 'post_type' => 'testimonials' ); 
      
-     if( $data['include'] ) $posts_args['include'] = $data['include'];
-     if( $data['type'] )  $posts_args['type'] = $data['type'];
+     if( isset( $data['include'] ) ) $posts_args['include'] = $data['include'];
+     if( isset( $data['type'] ) )  $posts_args['type'] = $data['type'];
      
      $posts = get_posts( $posts_args );
     
