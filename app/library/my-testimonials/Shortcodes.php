@@ -15,6 +15,7 @@ class MT_Shortcodes {
         
         
         add_shortcode( 'testimonials', array( &$this, 'testimonials' ) );
+        add_shortcode( 'testimonials-list', array( &$this, 'testimonialsList' ) );
         
         
     }
@@ -31,6 +32,22 @@ class MT_Shortcodes {
         
         
         return MT_View::make( 'testimonials', $args );
+        
+        
+    }
+    
+    /**
+     * Return a list view of our testimonials
+     *
+     * @param  array  $args
+     * @return view
+     * @added 1.0
+     */
+    
+    public function testimonialsList( $args ) {
+        
+        
+        return MT_View::make( 'testimonials-list', $args );
         
         
     }

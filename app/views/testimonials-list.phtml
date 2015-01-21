@@ -1,0 +1,19 @@
+<div class="my-testimonials-list">
+    
+    <?php
+    
+    $posts_args = array( 'posts_per_page' => -1, 'post_type' => 'testimonials' ); 
+    $posts = get_posts( $posts_args );
+    
+    foreach( $posts as $post ) : ?>
+
+        <div class="my-testimonials-list-item">
+
+            <div class="my-testimonials-list-content"><?php echo $post->post_content; ?></div>    
+            <div class="my-testimonials-list-title"><?php echo $post->post_title; ?></div>
+            
+        </div>
+    
+    <?php endforeach; ?>
+    
+</div>
