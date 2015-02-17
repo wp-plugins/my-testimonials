@@ -19,7 +19,7 @@ class MyTestimonials {
                 add_option( 'MTVer', MT_Registry::get( 'config', 'current_version' ) );
         endif;
         
-        MT_Registry::set( 'version', get_option( 'RMVer' ) );
+        MT_Registry::set( 'version', get_option( 'MTVer' ) );
 
         
     }
